@@ -1,36 +1,30 @@
 from django.shortcuts import render
 import mysql.connector as sql
 
-fn = '' # Primeiro nome
-ln = '' # Ultimo nome
-s = '' # Sexo 
+name = '' #  Nome
 em = '' # Email
 pwd = '' # Senha
 
 def signaction(request):
 
-    global fn, ln, s, em, pwd
+    global name, em, pwd
 
     if request.method=="POST":
-        m = sql.connect(host="localhost", user="root", passwd="1234", database="website")   #SE DER ERRADO VERIFICAR AQUI !!!!
-        
+        m = sql.connect(host="localhost", user="root", passwd="1234", database="website")   
+
         cursor = m.cursor()
         
         d = request.POST
 
         for key, value in d.items():
-            if key == "first_name":
-                fn = value
-            if key == "last_name":
-                ln = value
-            if key == "sex":
-                s = value
+            if key == "name":
+                name = value
             if key == "email":
                 em = value
             if key == "password":
                 pwd = value
         
-        c = "insert into users Values('{}', '{}', '{}', '{}', '{}')".format(fn,ln,s,em,pwd)
+        c = "insert into users Values('{}', '{}', '{}')".format(name, em, pwd)
 
         cursor.execute(c)
 

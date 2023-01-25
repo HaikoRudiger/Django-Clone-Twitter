@@ -28,7 +28,7 @@ def loginaction(request):
         m.commit()
 
         if t == ():
-            return render(request, 'error.html')
+            return render(request, 'login_page.html')
         else:
             return render(request, 'twitter.html')
 
