@@ -35,47 +35,47 @@
             </a>
     
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="" class="nav-link px-2 text-secondary">Tu visse?</a></li>
-                <li><a href="" class="nav-link px-2 text-white">Usuário</a></li>
-                <li><a href="" class="nav-link px-2 text-white">Sobre</a></li>
-              </ul>
+              <li><a href="{% url 'login' %}" class="nav-link px-2 text-secondary">Tu visse?</a></li>
+              <li><a href="{% url 'sobre' %}" class="nav-link px-2 text-white">Sobre</a></li>
+            </ul>
       
     
 
     
-            <div class="text-end">
-              <button type="button" class="btn btn-warning">Login or Sign-up</button>
-            </div>
+           
           </div>
         </div>
       </header>
 
 
 
-<!-- Digite seu TWIT's-->
-<!-- Extra -->
 
 <div class="modal modal-signin position-static d-block bg-secondary py-1" tabindex="-1" role="dialog" id="modalSignin" >
   <div class="modal-dialog" role="document">
     <div class="modal-content rounded-4 shadow">
 
-<!-- Inicio dos campos  -->  
+
      <div class="modal-body p-2 pt-4">
-        <form class="">
-          <div class="form-floating mb-3">
-              <input type="text" class="form-control rounded-3" id="floatingInput" placeholder="Nome completo" >
-                <label for="floatingInput">Digite sua mensagem</label> 
-              <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">Enviar</button>
-          </div>
-        </form>
+        
+      <form action="#" method="post">
+        {% csrf_token %}
+        
+        <div class="container">
+            <label for='descricao'><b>Descricao : </b></label><br>
+            <input type="descricao" class="form-control rounded-3" placeholder="Seu PyTwitter" name="descricao" required><br>  
+            <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit"><b>Enviar</b></button><br>   
+        </div>
+      </form>
+        
+
       </div>
     </div>
   </div>
-</div>
 
 
 
-<!-- Inicio do login Bootstrap -->
+
+
 
 <div class="modal modal-signin position-static d-block bg-secondary py-1 " tabindex="-1" role="dialog" id="modalSignin">
     <div class="modal-dialog" role="document">
@@ -90,9 +90,6 @@
     <p class="pb-3 mb-0 small lh-sm border-bottom">
       <strong class="d-block text-gray-dark">@username</strong>
       Some representative placeholder content, with some information about this user. Imagine this being some sort of status update, perhaps?
-      <small class="d-block text-end mt-3">
-        <a href="#">Editar</a> <a href="#">Deletar</a>
-      </small>
     </p>
 
   </div>
@@ -125,9 +122,6 @@
     </div>
   </div>
 
-
-
-<!-- Inicio do login com o Django -->
 
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">

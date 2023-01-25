@@ -33,3 +33,5 @@ def signaction(request):
     return render(request, 'signup_page.html')
 
 
+def sobre(request):
+    return render(request, 'sobre.html')

@@ -1,7 +1,5 @@
-
-
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,7 +28,7 @@
     <header class="p-3 text-bg-dark">
         <div class="container">
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <a href="{% url 'sobre' %}" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#FFCA2C" class="bi bi-twitter" viewBox="0 0 16 16">
                     <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
                   </svg>
@@ -49,38 +47,30 @@
       </header>
 
 
+<div class="modal modal-alert position-static d-block bg-secondary py-5" tabindex="-1" role="dialog" id="modalChoice">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content rounded-3 shadow">
+      <div class="modal-body p-4 text-center">
+        <h5 class="mb-0">+Devs2Blu Trabalho de turma</h5>
+        <br>
+        <p class="mb-0">Bem-vindo ao Tu visse?, projeto desenvolvido na turma de 2022/2023 do +Dev2Blu. Este projeto foi criado como exercício em sala, com o objetivo de aplicar os conhecimentos adquiridos durante o curso. O nome do projeto é uma alusão ao termo regional, lembrando fofocas, e foi escolhido devido a sua relação com a função principal do projeto, que é a compartilhar mensagens entre os usuários.
 
-<div class="modal modal-signin position-static d-block bg-secondary py-1" tabindex="-1" role="dialog" id="modalSignin">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content rounded-4 shadow">
-        <div class="modal-header p-5 pb-4 border-bottom-0">
-
-          <h1 class="fw-bold mb-0 fs-2">Fazer o login</h1>
-
-        </div>
-
-        <div class="modal-body p-5 pt-0">
+          A equipe responsável por este projeto é formada por Dieter, Guilherme, Haiko e Lirinha. Trabalhamos juntos para criar uma plataforma semelhante ao Twitter, onde os usuários podem se conectar e compartilhar suas mensagens.
           
-            <form action="#" method="post">
-                {% csrf_token %}
-                
-                <div class="container">
-                    <label for ='email'><b>Email :  </b></label><br>
-                    <input type="email" class="form-control rounded-3" placeholder="Enter email" name="email" float="right"  required><br>  
-                    <label for='password'><b>Senha : </b></label><br>
-                    <input type="password" class="form-control rounded-3" placeholder="Enter Password" name="password" required><br>  
-                    <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit"><b>Login</b></button><br>   
-                    Não tem conta? <a href="http://localhost:8000/signup/"> Cadastro </a>
-                </div>
-            </form>
-        </div>
+          Gostaríamos de agradecer aos nossos colegas de turma e ao professor pelo apoio e orientação durante o desenvolvimento deste projeto. Este projeto foi construído utilizando Python e o framework Django.
+          
+          Agradecemos a você por visitar o nosso site e esperamos que você aproveite a sua experiência aqui.</p>
+      </div>
+      <div class="modal-footer flex-nowrap p-0">
+        <a href="https://mpago.la/28YiEys" type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0 border-end" target="blank" ><strong>Pagar um cafézinho!</strong></a>
+        <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0" data-bs-dismiss="modal">Voltar</button>
       </div>
     </div>
   </div>
+</div>
 
 
 
-<!-- Inicio do login com o Django -->
 
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">

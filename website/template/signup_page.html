@@ -36,44 +36,39 @@
             </a>
     
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><a href="" class="nav-link px-2 text-secondary">Tu visse?</a></li>
-              <li><a href="" class="nav-link px-2 text-white">Usuário</a></li>
-              <li><a href="" class="nav-link px-2 text-white">Sobre</a></li>
+              <li><a href="{% url 'login' %}" class="nav-link px-2 text-secondary">Tu visse?</a></li>
+              <li><a href="{% url 'sobre' %}" class="nav-link px-2 text-white">Sobre</a></li>
             </ul>
     
 
     
-            <div class="text-end">
-              <button type="button" class="btn btn-warning">Login ou Cadastrar</button>
-            </div>
+
           </div>
         </div>
       </header>
 
 
-<!-- Inicio do login Bootstrap -->
-<!-- Extra -->
 <div class="modal modal-signin position-static d-block bg-secondary py-1" tabindex="-1" role="dialog" id="modalSignin">
     <div class="modal-dialog" role="document">
       <div class="modal-content rounded-4 shadow">
         <div class="modal-header p-5 pb-4 border-bottom-0">
-          <!-- <h1 class="modal-title fs-5" >Modal title</h1> -->
+
           <h1 class="fw-bold mb-0 fs-2">Cadastre-se</h1>
           
         </div>
-<!-- Inicio dos campos  -->  
+
         <div class="modal-body p-5 pt-0">
             <form action="#" method="post">
                 {% csrf_token %}
                 
                     <div class="container">
                     <label for='first_name'><b>Nome: </b></label><br>
-                    <input type='text' placeholder="Enter your first name" name='name' required><br>
+                    <input type='text' class="form-control rounded-3" placeholder="Enter your first name" name='name' required><br>
                     <label for ='email'><b>Email:  </b></label><br>
-                    <input type="email" placeholder="Enter email" name="email" float="right"  required><br>  
-                    <label for='password'><b>Password: </b></label><br>
-                    <input type="text" placeholder="Enter Password" name="password" required><br>  
-                    <button type="submit"><b>Cadastrar</b></button><br>     
+                    <input type="email" class="form-control rounded-3" placeholder="Enter email" name="email" float="right"  required><br>  
+                    <label for='password'><b>Senha: </b></label><br>
+                    <input type="text" class="form-control rounded-3" placeholder="Enter Password" name="password" required><br>  
+                    <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit"><b>Cadastrar</b></button><br>     
                     Você já tem conta?  Clica aqui:<a href="http://localhost:8000/login/"> Login </a>
                     </div>
             </form>
@@ -84,7 +79,6 @@
 
 
 
-<!-- Inicio do login com o Django -->
 
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">

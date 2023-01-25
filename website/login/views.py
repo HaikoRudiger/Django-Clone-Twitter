@@ -9,8 +9,7 @@ def loginaction(request):
     global em, pwd
 
     if request.method=="POST":
-        m = sql.connect(host="localhost", user="root", passwd="1234", database="website")   #SE DER ERRADO VERIFICAR AQUI !!!!
-        
+        m = sql.connect(host="localhost", user="root", passwd="1234", database="website")   
         cursor = m.cursor()
         
         d = request.POST
